@@ -2,7 +2,6 @@ package org.acme;
 
 import io.quarkus.infinispan.client.Remote;
 import org.infinispan.client.hotrod.RemoteCache;
-import org.infinispan.client.hotrod.RemoteCacheManager;
 
 import javax.inject.Inject;
 import javax.ws.rs.*;
