@@ -1,15 +1,15 @@
 {
-  "simpleCache": {
+  "simple-cache": {
     "distributed-cache": {
       "mode": "SYNC",
       "remote-timeout": "17500",
       "statistics": true,
       "encoding": {
         "key": {
-          "media-type": "application/x-protostream"
+          "media-type": "text/plain"
         },
         "value": {
-          "media-type": "application/x-protostream"
+          "media-type": "text/plain"
         }
       },
       "locking": {

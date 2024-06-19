@@ -1,18 +1,19 @@
 package org.acme;
 
-import io.quarkus.infinispan.client.Remote;
 import org.infinispan.client.hotrod.RemoteCache;
-
-import javax.inject.Inject;
-import javax.ws.rs.*;
-import javax.ws.rs.core.MediaType;
+import io.quarkus.infinispan.client.Remote;
+import jakarta.ws.rs.GET;
+import jakarta.ws.rs.PUT;
+import jakarta.ws.rs.Path;
+import jakarta.ws.rs.PathParam;
+import jakarta.ws.rs.Produces;
+import jakarta.ws.rs.core.MediaType;
 
 @Path("/cache")
 public class CacheResource {
 
-    @Inject
-    @Remote("simpleCache")
-    RemoteCache<String, String> cache;
+    @Remote("simple-cache")
+    private RemoteCache<String, String> cache;
 
     @GET
     @Path("/{key}")
